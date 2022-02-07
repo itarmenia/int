@@ -1,3 +1,26 @@
+The stream library has specialized types IntStream, LongStream, and DoubleStream
+
+As with object streams, you can also use the static generate and iterate methods. In addition, IntStream and LongStream 
+have static methods range and rangeClosed that generate integer ranges with step size one:
+
+When you have a stream of objects, you can transform it to a primitive type stream with the mapToInt, mapToLong, or mapToDouble methods.
+
+```java
+Stream<Integer> integers = IntStream.range(0, 100).boxed();
+
+```
+
+By default, parallel streams use the global fork-join pool returned by ForkJoinPool.commonPool. That is fine if your operations don’t block and you don’t share the pool with other tasks. There is a trick to substitute a different pool. Place your operations inside the submit method of a custom pool:
+ForkJoinPool customPool = . . .;
+
+result = customPool.submit(() ->
+   stream.parallel().map(. . .).collect(. . .)).get();”
+
+
+
+---
+
+
 ```java
 
 words.stream().sorted(Comparator.comparing(String::length).reversed());
