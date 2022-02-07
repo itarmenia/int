@@ -2,12 +2,12 @@
 - heap dump
 - Eclipse Memory Analyzer  
 
-### -Xmx set the maximum heap size. example -Xmx512m
-### -Xms set the starting heap size. example -Xms256m
-### -XX:MaxPermSize set the size of the permgen 
-### -verbose:gc print to the console when a garbage collection takes place
-### -Xmn set the size of the young generation
-### -XX:HeapDupmOnOutOfMemory creatres a heap dump file
+- -Xmx set the maximum heap size. example -Xmx512m
+- -Xms set the starting heap size. example -Xms256m
+- -XX:MaxPermSize set the size of the permgen 
+- -verbose:gc print to the console when a garbage collection takes place
+- -Xmn set the size of the young generation
+- -XX:HeapDupmOnOutOfMemory creatres a heap dump file
 
 ## Types of collector
 
