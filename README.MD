@@ -19,4 +19,6 @@
 
 ### [collection](collection.md)
 
-### [sql_join](sql_join.md)
+### [sql join](sql_join.md)
+
+### [sql union](sql_union.md)
